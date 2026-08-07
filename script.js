@@ -4,10 +4,8 @@
    id: único · name: nome · price: número (USD) · desc: descrição curta
    ========================================================== */
 const PRODUCTS = [
-  { id: "p1", name: "Produto Exemplo 1", price: 19.90, stock: "Em estoque", desc: "Descrição curta do produto ou serviço." },
-  { id: "p2", name: "Produto Exemplo 2", price: 34.50, stock: "Em estoque", desc: "Descrição curta do produto ou serviço." },
-  { id: "p3", name: "Serviço Exemplo",   price: 50.00, stock: "Sob encomenda", desc: "Descrição curta do serviço prestado." },
-  { id: "p4", name: "Produto Exemplo 4", price: 12.00, stock: "Últimas unidades", desc: "Descrição curta do produto ou serviço." },
+  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 17.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: "images/fritadeira-konka.jpg" },
+  { id: "p2", name: "Caixa de Som Bluetooth Portátil", price: 37.00, stock: "Em estoque", desc: "Som potente e portátil, à prova de água e poeira (IP68) — ideal pra qualquer lugar.", img: "images/caixa-de-som.jpg" },
 ];
 
 /* ==========================================================
@@ -22,7 +20,7 @@ function renderProducts() {
     <article class="product-card">
       <div class="product-media">
         <span class="stock-tag">${p.stock}</span>
-        IMAGEM
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
       </div>
       <div class="product-body">
         <h3 class="product-name">${p.name}</h3>
