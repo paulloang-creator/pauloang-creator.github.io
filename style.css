@@ -145,6 +145,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .form-note{font-size:0.85rem; color:var(--teal); min-height:1.2em;}
 
+.direct-contact{
+  max-width:520px; margin-top:36px; padding-top:28px; border-top:1px solid var(--line);
+  display:flex; flex-direction:column; gap:12px;
+}
+.direct-contact-label{font-family:var(--font-mono); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin:0 0 4px;}
+.contact-link{
+  display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink);
+  font-size:0.92rem; padding:10px 14px; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+}
+a.contact-link:hover{border-color:var(--teal); color:var(--teal-deep);}
+.contact-link-label{
+  font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.04em;
+  color:var(--gold); min-width:78px;
+}
+
 /* ---------- Footer ---------- */
 .site-footer{border-top:1px solid var(--line); padding:24px 0; color:var(--muted); font-size:0.85rem;}
 .footer-inner{display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
