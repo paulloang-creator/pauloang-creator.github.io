@@ -4,8 +4,11 @@
    id: único · name: nome · price: número (USD) · desc: descrição curta
    ========================================================== */
 const PRODUCTS = [
-  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 17.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: "images/fritadeira-konka.jpg" },
-  { id: "p2", name: "Caixa de Som Bluetooth Portátil", price: 37.00, stock: "Em estoque", desc: "Som potente e portátil, à prova de água e poeira (IP68) — ideal pra qualquer lugar.", img: "images/caixa-de-som.jpg" },
+  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 21.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: "images/fritadeira-konka.jpg" },
+  { id: "p2", name: "Caixa de Som Bluetooth Portátil", price: 40.00, stock: "Em estoque", desc: "Som potente e portátil, à prova de água e poeira (IP68) — ideal pra qualquer lugar.", img: "images/caixa-de-som.jpg","images/caixa.jpg", },
+  { id: "p3", name: "Bolsa de Sehora mini", price: 1500, stock: "Em estoque", desc: "Quadrado importado em pele de crocodilo americano, bolsade noite feita a mão em pele de crocodilo costurado à mão com fio encerada", img: "images/bolsa.png","images/bolsa2.png","images/bolsa3.png" },
+  { id: "p4", name: "Moto elétrica Surron light Bee X", price: 2910.66, stock: "Em estoque", desc: "Versão para pista todo-o-tereno.", img: "images/moto.png","images/moto2.png","images/moto3.png", },
+  { id: "p5", name: "IFASHION PERSONSOUL", price: 199.99, stock: "Em estoque", desc: "Cowboy com estampada de tigre bordado e dupla crista Casaco de corrida.", img: "images/cowboy.png","images/cowboy2.png","images/cowboy3.png", },
 ];
 
 /* ==========================================================
