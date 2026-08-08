@@ -4,11 +4,11 @@
    id: único · name: nome · price: número (USD) · desc: descrição curta
    ========================================================== */
 const PRODUCTS = [
-  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 21.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: "images/fritadeira-konka.jpg" },
-  { id: "p2", name: "Caixa de Som Bluetooth Portátil", price: 40.00, stock: "Em estoque", desc: "Som potente e portátil, à prova de água e poeira (IP68) — ideal pra qualquer lugar.", img: "images/caixa-de-som.jpg","images/caixa.jpg", },
-  { id: "p3", name: "Bolsa de Sehora mini", price: 1500, stock: "Em estoque", desc: "Quadrado importado em pele de crocodilo americano, bolsade noite feita a mão em pele de crocodilo costurado à mão com fio encerada", img: "images/bolsa.png","images/bolsa2.png","images/bolsa3.png" },
-  { id: "p4", name: "Moto elétrica Surron light Bee X", price: 2910.66, stock: "Em estoque", desc: "Versão para pista todo-o-tereno.", img: "images/moto.png","images/moto2.png","images/moto3.png", },
-  { id: "p5", name: "IFASHION PERSONSOUL", price: 199.99, stock: "Em estoque", desc: "Cowboy com estampada de tigre bordado e dupla crista Casaco de corrida.", img: "images/cowboy.png","images/cowboy2.png","images/cowboy3.png", },
+  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 21.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: ["images/fritadeira-konka.jpg","images/frit2.jpg","images/frit3.jpg",] },
+  { id: "p2", name: "Caixa de Som Bluetooth Portátil", price: 40.00, stock: "Em estoque", desc: "Som potente e portátil, à prova de água e poeira (IP68) — ideal pra qualquer lugar.", img: ["images/caixa-de-som.jpg", "images/caixa.jpg"] },
+  { id: "p3", name: "Bolsa de Senhora Mini", price: 1500.00, stock: "Em estoque", desc: "Quadrada, importada, em pele de crocodilo — bolsa de noite feita à mão, costurada com fio encerado.", img: ["images/bolsa.png", "images/bolsa2.png", "images/bolsa3.png"] },
+  { id: "p4", name: "Moto Elétrica Surron Light Bee X", price: 2910.66, stock: "Em estoque", desc: "Versão para pista e todo-o-terreno.", img: ["images/moto.png", "images/moto2.png", "images/moto3.png"] },
+  { id: "p5", name: "IFASHION PERSONSOUL", price: 199.99, stock: "Em estoque", desc: "Casaco estilo cowboy com estampa de tigre bordada e dupla crista, corte de corrida.", img: ["images/cowboy.png", "images/cowboy2.png", "images/cowboy3.png"] },
 ];
 
 /* ==========================================================
@@ -23,7 +23,11 @@ function renderProducts() {
     <article class="product-card">
       <div class="product-media">
         <span class="stock-tag">${p.stock}</span>
-        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        <img src="${p.img[0]}" alt="${p.name}" loading="lazy" class="product-img" data-product="${p.id}">
+        ${p.img.length > 1 ? `
+          <div class="media-dots">
+            ${p.img.map((src, i) => `<button class="dot ${i === 0 ? 'active' : ''}" data-product="${p.id}" data-src="${src}" aria-label="Foto ${i + 1}"></button>`).join("")}
+          </div>` : ""}
       </div>
       <div class="product-body">
         <h3 class="product-name">${p.name}</h3>
@@ -38,6 +42,15 @@ function renderProducts() {
 
   grid.querySelectorAll(".add-btn").forEach(btn => {
     btn.addEventListener("click", () => addToCart(btn.dataset.id));
+  });
+
+  grid.querySelectorAll(".dot").forEach(dot => {
+    dot.addEventListener("click", () => {
+      const card = dot.closest(".product-card");
+      card.querySelector(".product-img").src = dot.dataset.src;
+      card.querySelectorAll(".dot").forEach(d => d.classList.remove("active"));
+      dot.classList.add("active");
+    });
   });
 }
 
