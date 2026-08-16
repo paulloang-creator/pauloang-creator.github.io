@@ -4,7 +4,7 @@
    id: único · name: nome · price: número (USD) · desc: descrição curta
    ========================================================== */
 const PRODUCTS = [
-  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 21.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: ["images/fritadeira-konka.jpg","images/frit2.jpg","images/frit3.jpg",] },
+  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 21.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: ["images/fritadeira-konka.jpg"] },
   { id: "p2", name: "Caixa de Som Bluetooth Portátil", price: 40.00, stock: "Em estoque", desc: "Som potente e portátil, à prova de água e poeira (IP68) — ideal pra qualquer lugar.", img: ["images/caixa-de-som.jpg", "images/caixa.jpg"] },
   { id: "p3", name: "Bolsa de Senhora Mini", price: 1500.00, stock: "Em estoque", desc: "Quadrada, importada, em pele de crocodilo — bolsa de noite feita à mão, costurada com fio encerado.", img: ["images/bolsa.png", "images/bolsa2.png", "images/bolsa3.png"] },
   { id: "p4", name: "Moto Elétrica Surron Light Bee X", price: 2910.66, stock: "Em estoque", desc: "Versão para pista e todo-o-terreno.", img: ["images/moto.png", "images/moto2.png", "images/moto3.png"] },
@@ -185,3 +185,33 @@ document.getElementById("contactForm").addEventListener("submit", (e) => {
 document.getElementById("year").textContent = new Date().getFullYear();
 renderProducts();
 renderCart();
+
+/* ==========================================================
+   6. PWA — instalar como app + funcionamento offline
+   ========================================================== */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(err => console.error("Erro no service worker:", err));
+  });
+}
+
+let deferredInstallPrompt = null;
+const installBtn = document.getElementById("installBtn");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  installBtn.hidden = false;
+});
+
+installBtn.addEventListener("click", async () => {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  installBtn.hidden = true;
+});
+
+window.addEventListener("appinstalled", () => {
+  installBtn.hidden = true;
+});

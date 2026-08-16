@@ -56,6 +56,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .cart-toggle:hover{background:var(--teal);}
 .cart-count{background:var(--gold); color:var(--teal-deep); font-weight:600; padding:1px 7px; border-radius:10px;}
+.install-btn{
+  font-family:var(--font-mono); font-size:0.8rem;
+  background:transparent; border:1px solid var(--teal-deep); color:var(--teal-deep);
+  padding:8px 14px; border-radius:var(--radius); cursor:pointer;
+}
+.install-btn:hover{background:var(--teal-deep); color:#fff;}
 
 /* ---------- Hero ---------- */
 .hero{
