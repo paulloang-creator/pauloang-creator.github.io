@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achei Pra Ti — Catálogo</title>
+<meta name="description" content="Achei Pra Ti — loja online de produtos e serviços. Pagamentos via PayPal e Alipay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0F3D3E">
+<link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark">◆</span>
+      <span class="brand-name">Achei Pra Ti</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="cart-toggle" id="cartToggle" aria-label="Abrir carrinho">
+      Carrinho <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="install-btn" id="installBtn" hidden>Instalar app</button>
+  </div>
+</header>
+
+<section class="hero featured-product">
+  <div class="wrap featured-body-only">
+    <p class="eyebrow featured-eyebrow">
+      <img src="images/kit-ortalist.jpg" alt="Kit Ortalista" class="featured-thumb">
+      Kit Ortalista — Produto em destaque
+    </p>
+      <h1>Pensado com ortalistas de Bissau, <em>para ortalistas de Bissau.</em></h1>
+      <p class="hero-sub">Dez variedades de sementes, ferramentas de horta, proteção e uma lanterna recarregável — tudo num só kit, com uma oferta de chá chinês.</p>
+
+      <p class="featured-subhead">Sementes inclusas (10 variedades)</p>
+      <ul class="featured-list">
+        <li>Tomate</li>
+        <li>Cenoura</li>
+        <li>Alface</li>
+        <li>Cebola</li>
+        <li>Malagueta (涮涮辣)</li>
+        <li>Pimentão</li>
+        <li>Berinjela</li>
+        <li>Repolho</li>
+        <li>Quiabo</li>
+        <li>Pepino</li>
+      </ul>
+
+      <div class="featured-photo">
+        <img src="images/kit-ortalist.jpg" alt="Itens do Kit Ortalista">
+      </div>
+
+      <p class="featured-subhead">Também inclui</p>
+      <ul class="featured-list">
+        <li>Enxada pequena</li>
+        <li>Sacho de mondar</li>
+        <li>Inseticida biológico</li>
+        <li>2 pares de luvas</li>
+        <li>Balde dobrável</li>
+        <li>Lanterna de campismo recarregável</li>
+        <li>Chá medicinal chinês, oferta</li>
+      </ul>
+
+      <div class="featured-foot">
+        <span class="featured-price">15.000 XOF</span>
+        <a href="https://wa.me/245955309720?text=Ol%C3%A1!%20Quero%20encomendar%20o%20Kit%20Ortalista." target="_blank" rel="noopener" class="btn btn-primary">Quero este kit</a>
+      </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section id="catalogo" class="catalog-section">
+    <div class="section-head">
+      <h2>Catálogo</h2>
+      <p class="section-note">Novidades toda semana — direto de fornecedores na China.</p>
+    </div>
+    <div class="product-grid" id="productGrid">
+      <!-- produtos inseridos via JS -->
+    </div>
+  </section>
+
+  <section id="sobre" class="about-section">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">Sobre</p>
+        <h2>Quem está do outro lado do balcão</h2>
+        <p>Sou estudante universitário na China — e é isso que torna a Achei Pra Ti diferente. Estando aqui, tenho acesso direto a fábricas e fornecedores, sem passar por vários intermediários: menos custo no caminho, preço mais justo pra você. Comecei com moda (roupas, calçados e bolsas), cosméticos e eletrônicos do dia a dia; à medida que a loja cresce, o catálogo vai se expandir para máquinas e equipamentos elétricos — de utensílios domésticos a veículos elétricos. Cada produto é conferido antes de sair, e cada pedido é acompanhado até chegar até você.</p>
+      </div>
+      <div class="about-facts">
+        <div class="fact"><span class="fact-num">01</span><span>Compra direto de fábricas e fornecedores na China — sem intermediários</span></div>
+        <div class="fact"><span class="fact-num">02</span><span>Entrega local e internacional — o prazo varia conforme o país de destino</span></div>
+        <div class="fact"><span class="fact-num">03</span><span>Pagamento seguro via PayPal e Alipay</span></div>
+        <div class="fact"><span class="fact-num">04</span><span>Suporte direto por WhatsApp / e-mail em cada etapa do pedido</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact-section">
+    <div class="section-head">
+      <h2>Contato</h2>
+      <p class="section-note">Dúvidas sobre um produto, um pedido ou o prazo de entrega para o teu país? Escreve — respondo pessoalmente.</p>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="field">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+
+    <div class="direct-contact">
+      <p class="direct-contact-label">Ou fale direto:</p>
+      <a href="mailto:paulloang@gmail.com" class="contact-link">
+        <span class="contact-link-label">E-mail</span> paulloang@gmail.com
+      </a>
+      <a href="https://wa.me/245955309720" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link-label">WhatsApp</span> +245 955 309 720
+      </a>
+      <a href="https://www.instagram.com/kp_cerebro/" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link-label">Instagram</span> @kp_cerebro
+      </a>
+      <span class="contact-link">
+        <span class="contact-link-label">Facebook</span> Kp Cérebro
+      </span>
+      <a href="https://www.tiktok.com/@kp_cerebro9" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-link-label">TikTok</span> @kp_cerebro9
+      </a>
+      <span class="contact-link">
+        <span class="contact-link-label">WeChat</span> Kpcerebro03
+      </span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Achei Pra Ti</span>
+    <span class="footer-note">Produtos selecionados direto da China, para onde você estiver.</span>
+  </div>
+</footer>
+
+<!-- Carrinho lateral -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de compras">
+  <div class="cart-drawer-head">
+    <h3>Seu carrinho</h3>
+    <button class="cart-close" id="cartClose" aria-label="Fechar carrinho">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty" id="cartEmpty">O carrinho está vazio.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <div id="paypal-button-container"></div>
+    <button class="btn btn-secondary" id="alipayBtn">Pagar com Alipay</button>
+    <p class="cart-footnote">Pagamento seguro via PayPal. Alipay em breve.</p>
+  </div>
+</aside>
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_Z7J0CFtpTNKvQ-j7wie6JursDG1ZTSMe6CP1Nc4qwkhyiYV_4q8W4ER-Qb8YqD7vXknqPvDMAMWeLc&currency=USD"></script>
+<script src="script.js"></script>
+</body>
+</html>
