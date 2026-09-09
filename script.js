@@ -4,11 +4,13 @@
    id: único · name: nome · price: número (USD) · desc: descrição curta
    ========================================================== */
 const PRODUCTS = [
-  { id: "p1", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 21.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: ["images/fritadeira-konka.jpg"] },
+  { id: "p1", name: "Kit Ortalista", price: 26.70, stock: "Em estoque", desc: "Kit completo para horta: 10 variedades de sementes, enxada, sacho de mondar, inseticida biológico, luvas, balde dobrável, lanterna recarregável e uma oferta de chá chinês. Pensado com ortalistas de Bissau, para ortalistas de Bissau.", img: ["images/kit-ortalist.jpg"] },
   { id: "p2", name: "Caixa de Som Bluetooth Portátil", price: 40.00, stock: "Em estoque", desc: "Som potente e portátil, à prova de água e poeira (IP68) — ideal pra qualquer lugar.", img: ["images/caixa-de-som.jpg", "images/caixa.jpg"] },
   { id: "p3", name: "Bolsa de Senhora Mini", price: 1500.00, stock: "Em estoque", desc: "Quadrada, importada, em pele de crocodilo — bolsa de noite feita à mão, costurada com fio encerado.", img: ["images/bolsa.png", "images/bolsa2.png", "images/bolsa3.png"] },
   { id: "p4", name: "Moto Elétrica Surron Light Bee X", price: 2910.66, stock: "Em estoque", desc: "Versão para pista e todo-o-terreno.", img: ["images/moto.png", "images/moto2.png", "images/moto3.png"] },
   { id: "p5", name: "IFASHION PERSONSOUL", price: 199.99, stock: "Em estoque", desc: "Casaco estilo cowboy com estampa de tigre bordada e dupla crista, corte de corrida.", img: ["images/cowboy.png", "images/cowboy2.png", "images/cowboy3.png"] },
+  { id: "p6", name: "Fritadeira Elétrica Sem Óleo KONKA", price: 21.90, stock: "Em estoque", desc: "Grande capacidade, tela digital e janela visível — cabe até um frango inteiro.", img: ["images/fritadeira-konka.jpg"] },
+
 ];
 
 /* ==========================================================
