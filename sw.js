@@ -1,4 +1,4 @@
-const CACHE_NAME = "achei-pra-ti-v1";
+const CACHE_NAME = "achei-pra-ti-v2";
 const CORE_ASSETS = [
   "./index.html",
   "./style.css",
